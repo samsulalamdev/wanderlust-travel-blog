@@ -1,0 +1,440 @@
+/* Wanderlust styles. Plain CSS, no animations. */
+
+:root {
+  --green: #2f7d4f;
+  --green-dark: #236040;
+  --sand: #fbf6ec;
+  --ink: #1f2a24;
+  --muted: #607067;
+  --line: #e4ddcf;
+  --amber: #e29b2c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink);
+  background: #ffffff;
+}
+
+a {
+  color: var(--green-dark);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.25;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: 11px 24px;
+  background: var(--green);
+  color: #ffffff;
+  border: 2px solid var(--green);
+  border-radius: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--green-dark);
+  border-color: var(--green-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--green-dark);
+}
+
+.btn-outline:hover {
+  color: #ffffff;
+}
+
+/* Header and footer */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--green);
+}
+
+.main-nav a {
+  margin-left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  color: var(--green);
+}
+
+.site-footer {
+  padding: 24px 0;
+  background: var(--ink);
+  color: #c7d2cb;
+  text-align: center;
+  font-size: 14px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* Pictures (a coloured box shows if the image file is missing) */
+
+.cover {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #dfeee4;
+}
+
+.cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hero */
+
+.hero {
+  padding: 64px 0;
+  background: var(--sand);
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.eyebrow {
+  margin-bottom: 8px;
+  color: var(--green-dark);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+
+.hero h1 {
+  margin-bottom: 14px;
+  font-size: 42px;
+}
+
+.lead {
+  font-size: 19px;
+  color: var(--muted);
+}
+
+/* Sections */
+
+.section {
+  padding: 56px 0;
+}
+
+.section-soft {
+  background: var(--sand);
+}
+
+.section-title {
+  margin-bottom: 24px;
+  font-size: 28px;
+}
+
+.page-heading {
+  padding: 40px 0 28px;
+  background: var(--sand);
+  border-bottom: 1px solid var(--line);
+}
+
+.page-heading h1 {
+  font-size: 34px;
+}
+
+.page-heading p {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+/* Categories */
+
+.category-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.category-box {
+  padding: 22px 12px;
+  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.category-box:hover {
+  border-color: var(--green);
+  color: var(--green-dark);
+}
+
+/* Post cards */
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.post-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.post-card .cover {
+  border-radius: 0;
+}
+
+.post-card-body {
+  padding: 16px 18px 6px;
+}
+
+.post-card-body h3 {
+  margin-bottom: 8px;
+  font-size: 19px;
+}
+
+.post-card-body h3 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.post-card-body h3 a:hover {
+  color: var(--green);
+}
+
+.post-card-body p {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.post-meta {
+  margin-bottom: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.tag {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 2px 10px;
+  background: #e4f1e9;
+  color: var(--green-dark);
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+/* Filters on the stories page */
+
+.filters {
+  margin-bottom: 28px;
+}
+
+.filters input {
+  width: 100%;
+  max-width: 360px;
+  margin-bottom: 14px;
+  padding: 10px 12px;
+  border: 1px solid #c9c2b2;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.chip {
+  margin: 0 8px 8px 0;
+  padding: 7px 16px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.chip:hover {
+  border-color: var(--green);
+}
+
+.chip.active {
+  background: var(--green);
+  border-color: var(--green);
+  color: #ffffff;
+}
+
+.empty {
+  padding: 24px;
+  background: var(--sand);
+  border-radius: 8px;
+}
+
+/* Article page */
+
+.article {
+  max-width: 740px;
+}
+
+.article h1 {
+  margin-bottom: 8px;
+  font-size: 36px;
+}
+
+.article-cover {
+  margin: 20px 0 28px;
+}
+
+.article hr {
+  margin: 32px 0 20px;
+  border: none;
+  border-top: 1px solid var(--line);
+}
+
+.article h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.related {
+  padding-left: 20px;
+}
+
+.related li {
+  margin-bottom: 6px;
+}
+
+/* About */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+code {
+  padding: 1px 6px;
+  background: var(--sand);
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+/* Tablet and phone */
+
+@media (max-width: 900px) {
+  .hero-inner,
+  .about-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .post-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .category-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 600px) {
+  .post-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .main-nav a {
+    margin-left: 14px;
+  }
+
+  .hero,
+  .section {
+    padding: 40px 0;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .article h1 {
+    font-size: 28px;
+  }
+}
